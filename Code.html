@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kerteyka.exe</title>
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #100b24;
+  color: white;
+  font-family: "Trebuchet MS", sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(#ffffff0b 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+  background-size: 25px 25px;
+  pointer-events: none;
+}
+
+header {
+  padding: 18px;
+  border-bottom: 2px solid #ff5be8;
+  background: #19102f;
+  color: #65fff3;
+  letter-spacing: 3px;
+}
+
+main {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: clamp(42px, 12vw, 76px);
+  margin: 20px 0;
+  color: #ff69ed;
+  text-shadow: 4px 4px #5b37ff,
+               0 0 25px #ff43db;
+}
+
+.star {
+  color: #72fff4;
+  font-size: 25px;
+}
+
+.panel {
+  background: #21163b;
+  border: 2px solid #a16aff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 0 25px #9c48ff40;
+}
+
+button {
+  margin: 8px;
+  padding: 13px 22px;
+  border: 2px solid white;
+  border-radius: 9px;
+  background: #ff65dc;
+  color: #170c29;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 4px 4px #7254ff;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+a { color: #70fff4; }
+
+#message {
+  color: #70fff4;
+  min-height: 24px;
+}
+
+footer {
+  padding: 25px;
+  color: #b9a8d9;
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+
+<header>★ KERTEYKA INTERNET CLUB ★</header>
+
+<main>
+  <div class="star">✦ WELCOME TO MY WEBSITE ✦</div>
+  <h1>kerteyka</h1>
+
+  <div class="panel">
+    <p>WELCOME TO MY LITTLE CORNER OF THE INTERNET!</p>
+    <p>Y2K vibes • memes • random stuff</p>
+
+    <button onclick="showMessage()">
+      ENTER THE CHAOS
+    </button>
+
+    <p id="message">SYSTEM READY_</p>
+  </div>
+
+  <p style="margin-top:35px">
+    <a href="https://github.com/">GITHUB</a>
+    &nbsp; ★ &nbsp; MORE COMING SOON
+  </p>
+</main>
+
+<footer>
+  KERTEYKA.EXE © 2026 — BEST VIEWED WITH IMAGINATION
+</footer>
+
+<script>
+function showMessage() {
+  const messages = [
+    "WELCOME TO THE INTERNET!",
+    "YOU FOUND A SECRET!",
+    "ERROR 404: BORING VIBES NOT FOUND",
+    "KERTEYKA.EXE IS RUNNING...",
+    "THE MEMES ARE LOADING..."
+  ];
+
+  document.getElementById("message").textContent =
+    messages[Math.floor(Math.random() * messages.length)];
+}
+</script>
+
+</body>
+</html>
